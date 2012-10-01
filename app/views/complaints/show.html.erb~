@@ -7,7 +7,7 @@
 
 <p>
   <b>Ward:</b>
-  <%= @complaint.ward_num %>
+  <%= @ward.ward_id %>
 </p>
 
 

@@ -2,7 +2,7 @@
 
 <p>
   <b>Ward num:</b>
-  <%= @ward.ward_num %>
+  <%= @ward.ward_id %>
 </p>
 
 

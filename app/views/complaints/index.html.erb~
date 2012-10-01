@@ -12,14 +12,15 @@
 <% @complaints.each do |complaint| %>
   <tr>
     <td><%= complaint.complaint_text %></td>
-    <td><%= complaint.ward_id %></td>
-    <td><%= link_to 'Show', complaint %></td>
-    <td><%= link_to 'Edit', edit_complaint_path(complaint) %></td>
-    <td><%= link_to 'Destroy', complaint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= complaint.ward.ward_num %></td>
+    <td><%= link_to 'Show', ward_complaint_path(@ward, complaint) %></td>
+    <td><%= link_to 'Edit', edit_ward_complaint_path(@ward, complaint) %></td>
+    <td><%= link_to 'Destroy', [@ward, complaint], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Complaint', new_complaint_path %>
+<%= link_to 'New Complaint', new_ward_complaint_path(@ward) %>
+<%= link_to 'New Ward', new_ward_path %>

@@ -1,4 +1,6 @@
 Chico::Application.routes.draw do
+  resources :complaints
+
   resources :wards
 
   # The priority is based upon order of creation:

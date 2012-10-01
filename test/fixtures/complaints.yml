@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  complaint_text: MyText
+  ward_id: 1
+
+two:
+  complaint_text: MyText
+  ward_id: 1

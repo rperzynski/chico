@@ -16,7 +16,7 @@ class ComplaintsController < ApplicationController
   # GET /complaints/1
   # GET /complaints/1.json
   def show
-    @complaint = @ward.complaint.find(params[:id])
+    @complaint = @ward.complaints.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

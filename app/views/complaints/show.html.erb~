@@ -7,9 +7,9 @@
 
 <p>
   <b>Ward:</b>
-  <%= @complaint.ward_id %>
+  <%= @complaint.ward_num %>
 </p>
 
 
-<%= link_to 'Edit', edit_complaint_path(@complaint) %> |
-<%= link_to 'Back', complaints_path %>
+<%= link_to 'Edit', edit_ward_complaint_path(@ward, @complaint) %> |
+<%= link_to 'Back', ward_complaints_path(@ward) %>

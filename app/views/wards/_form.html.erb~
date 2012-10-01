@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-   
+    <%= f.label : %><br />
     <%= f.text_field :ward_num %>
   </div>
   <div class="actions">

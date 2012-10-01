@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Ward num:</b>
-  <%= @ward.ward_id %>
+  <b>You entered ward number:</b></br>
+  <%= @ward.ward_num %>
 </p>
 
 
-<%= link_to 'Edit', edit_ward_path(@ward) %> |
-<%= link_to 'Back', wards_path %>
+<p>If this is correct, <%= link_to 'Click to enter complaint', new_ward_complaint_path(@ward) %>
+</p>
+</br>
+<%= link_to 'If not, please click here to go back', wards_path %>
 
-<%= link_to 'New Complaint', new_ward_complaint_path(@ward) %>
+
+

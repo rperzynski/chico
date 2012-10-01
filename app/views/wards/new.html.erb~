@@ -1,4 +1,4 @@
-<h1>What is your Ward number?</h1>
+<h1>New ward</h1>
 
 <%= render 'form' %>
 

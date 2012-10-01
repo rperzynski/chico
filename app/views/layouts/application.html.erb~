@@ -23,7 +23,7 @@
         <div class="nav-collapse">
           <ul class="nav" >
             <li><%= link_to 'New Complaint', new_ward_path %></li>
-            <li><%= link_to 'View Complaint', wards_path %></li>
+            <li><%= link_to 'View Complaint', new_ward_path %></li>
             <li><%= link_to "Contact Us" %></li>
           </ul>
         </div>

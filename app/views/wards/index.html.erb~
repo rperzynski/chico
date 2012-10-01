@@ -19,7 +19,15 @@
 </table>
 
 
-
+<% @complaint.ward.each do |complaint| %>
+<tr>
+    <td><%= complaint.complaint_text %></td>
+    <td><%= complaint.ward.ward_num %></td>
+    <td><%= link_to 'Show', ward_complaint_path(@ward, complaint) %></td>
+    <td><%= link_to 'Edit', edit_ward_complaint_path(@ward, complaint) %></td>
+    <td><%= link_to 'Destroy', [@ward, complaint], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
 
 <br />
 

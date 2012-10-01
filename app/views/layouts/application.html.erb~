@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Store</title>
+  <title>Chicago Complaint Department</title>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
   <![endif]-->
@@ -22,8 +22,8 @@
         <a class="brand" href='<%= wards_path %>'>City of Chicago</a>
         <div class="nav-collapse">
           <ul class="nav" >
-            <li><%= link_to 'New Complaint', new_ward_path %></li>
-            <li><%= link_to 'View Complaint', new_ward_path %></li>
+            <li><%= link_to 'New Complaint', new_ward_complaint_path(@ward)  %></li>
+            <li><%= link_to 'View Complaint', wards_path %></li>
             <li><%= link_to "Contact Us" %></li>
           </ul>
         </div>

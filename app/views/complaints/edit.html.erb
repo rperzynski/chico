@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @complaint %> |
-<%= link_to 'Back', complaints_path %>
+<%= link_to 'Show', ward_complaint_path(@ward, @complaint) %> |
+<%= link_to 'Back', ward_complaints_path(@ward) %>

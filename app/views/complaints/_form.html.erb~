@@ -1,4 +1,4 @@
-<%= form_for([@ward, @complaint]) do |f| %>
+<%= form_for(@complaint) do |f| %>
   <% if @complaint.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>

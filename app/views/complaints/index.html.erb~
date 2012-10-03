@@ -1,26 +1,23 @@
-<h1>Listing complaints</h1>
 
-<table>
-  <tr>
-    <th>Complaint text</th>
-    <th>Ward</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
+<div class="alert alert-info">
+<h2>Ward Number <%=  @ward.ward_num %> </h2>
+</div>
 <% @complaints.each do |complaint| %>
-  <tr>
-    <td><%= complaint.complaint_text %></td>
-    <td><%= complaint.ward.ward_num %></td>
-    <td><%= link_to 'Show', ward_complaint_path(@ward, complaint) %></td>
-    <td><%= link_to 'Edit', edit_ward_complaint_path(@ward, complaint) %></td>
-    <td><%= link_to 'Destroy', [@ward, complaint], method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+
+
+
+    <div class="hero-unit"><h5><%= link_to complaint.complaint_text, ward_complaint_path(@ward, complaint) %></h5></div>
+    
+
 <% end %>
-</table>
 
-<br />
+<ul class="nav nav-tabs nav-stacked">
+<li><%= link_to 'File A New Complaint In This Ward', new_ward_complaint_path(@ward) %></li>
+<li><%= link_to 'View All Wards', wards_path %></li>
+</ul>
 
-<%= link_to 'New Complaint', new_ward_complaint_path(@ward) %>
-<%= link_to 'New Ward', new_ward_path %>
+
+
+

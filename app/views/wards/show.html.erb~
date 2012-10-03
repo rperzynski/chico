@@ -1,15 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>You entered ward number:</b></br>
-  <%= @ward.ward_num %>
-</p>
+<div class="alert alert-info">
+<h2>Ward Number <%= @ward.ward_num %> </h2>
+</div>
 
+<pre id="show">
+Number of complaints in <strong>Ward<%= @ward.ward_num %></strong>: <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), ward_complaints_path(@ward) %></strong> 
+</pre>
 
-<p>If this is correct, <%= link_to 'Click to enter complaint', new_ward_complaint_path(@ward) %>
-</p>
-</br>
-<%= link_to 'If not, please click here to go back', wards_path %>
+<pre id="show">
+I would like to <strong><%= link_to 'File a Complaint', new_ward_complaint_path(@ward) %></strong>
+</pre>
 
-
+<pre id="show">
+<strong><%= link_to 'View All Wards', wards_path %></strong>
+</pre>
 

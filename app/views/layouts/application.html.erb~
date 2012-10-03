@@ -19,12 +19,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href='<%= wards_path %>'>City of Chicago</a>
+        <a class="brand" href='<%= wards_path %>'>Chicago Complaints Department</a>
         <div class="nav-collapse">
           <ul class="nav" >
-            <li><%= link_to 'New Complaint', new_ward_complaint_path(@ward)  %></li>
-            <li><%= link_to 'View Complaint', wards_path %></li>
-            <li><%= link_to "Contact Us" %></li>
+            <li><%= link_to 'New Complaint', wards_path %></li>
+            <li><a href="http://www.cityofchicago.org">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -35,7 +34,7 @@
     <div class="row">
       <div class="span9"><%= yield %></div>
       <div class="span3">
-        <h2>About Us</h2>
+        <h2><img src="http://i3.squidoocdn.com/resize/squidoo_images/250/draft_lens5590012module43088992photo_1274239187Stars.jpg"/></h2>
         The City of Chicago Complaint Department is here to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.
       </div>
     </div>

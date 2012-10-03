@@ -1,15 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="alert alert-success"><%= notice %></div>
 
-<p>
-  <b>Complaint text:</b>
-  <%= @complaint.complaint_text %>
-</p>
-
-<p>
-  <b>Ward:</b>
-  <%= @ward.ward_num %>
-</p>
+<div class="alert alert-info">
+<h2>Ward Number <%= @ward.ward_num %> </h2>
+</div>
 
 
-<%= link_to 'Edit', edit_ward_complaint_path(@ward, @complaint) %> |
-<%= link_to 'Back', ward_complaints_path(@ward) %>
+
+  <div class="hero-unit"><h5><%= @complaint.complaint_text %></h5></div>
+
+
+<ul class="nav nav-tabs nav-stacked">
+<li><%= link_to 'Edit Complaint', edit_ward_complaint_path(@ward, @complaint) %></li>
+<li><%= link_to 'View All Complaints In This Ward', ward_complaints_path(@ward) %></li>
+<li><%= link_to 'Select Different Ward', wards_path %></li>
+
+</ul>

@@ -1,29 +1,22 @@
-<h1>Listing wards</h1>
+<div class="alert alert-info">
+<h2>Select Your Ward Number</h2>
+</div>
 
-<table>
-  <tr>
-    <th>Ward num</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @wards.each do |ward| %>
-  <tr>
-    <td><%= ward.ward_num %></td>
-    <td><%= link_to 'Show', ward %></td>
-    <td><%= link_to 'Edit', edit_ward_path(ward) %></td>
-    <td><%= link_to 'Destroy', ward, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+
+<button><%= link_to ward.ward_num, ward %></button>
+
+
+
+    
+
+  
 <% end %>
-</table>
 
 
-
-
-<br />
-
-<%= link_to 'New Ward', new_ward_path %>
 
 
 

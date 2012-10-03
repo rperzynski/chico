@@ -1,6 +1,7 @@
-<h1>Editing complaint</h1>
+<h1>Edit Your Complaint</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', ward_complaint_path(@ward, @complaint) %> |
-<%= link_to 'Back', ward_complaints_path(@ward) %>
+<ul class="nav nav-tabs nav-stacked">
+<li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
+</ul>

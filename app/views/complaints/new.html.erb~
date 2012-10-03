@@ -1,5 +1,14 @@
-<h1>New complaint</h1>
+<div class="alert alert-info">
+<h2>Ward Number <%= @ward.ward_num %> </h2>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', ward_complaints_path %>
+<%= link_to 'Back', ward_complaints_path(@ward) %>
+
+
+
+<ul class="nav nav-tabs nav-stacked">
+<li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
+<li><%= link_to 'View All Wards', wards_path %></li>
+</ul>

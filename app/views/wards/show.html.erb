@@ -5,7 +5,7 @@
 </div>
 
 <pre id="show">
-Number of complaints in <strong>Ward<%= @ward.ward_num %></strong>: <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), ward_complaints_path(@ward) %></strong> 
+View the <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), ward_complaints_path(@ward) %></strong> in Ward<%= @ward.ward_num%>
 </pre>
 
 <pre id="show">

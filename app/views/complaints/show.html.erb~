@@ -4,7 +4,7 @@
 <h2>Ward Number <%= @ward.ward_num %> </h2>
 </div>
 
-
+Socrata.ward.alderman
 
   <div class="hero-unit"><h5><%= @complaint.complaint_text %></h5></div>
 

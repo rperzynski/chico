@@ -11,7 +11,7 @@ View the <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), war
 <% end %>
 </pre>
 
-
+<% Socrata.ward.alderman %>
 <pre id="show">
 <strong><%= link_to 'File a Complaint', new_ward_complaint_path(@ward) %></strong>
 </pre>
@@ -21,7 +21,7 @@ View the <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), war
 </pre>
 
 <pre id="show">
-<strong><a href="http://www.cityofchicago.org/city/en/about/wards.html">More About Ward<%= @ward.ward_num%></strong>
+<strong><a href="http://www.cityofchicago.org/city/en/about/wards.html">View Information About Ward<%= @ward.ward_num%></a></strong>
 </pre>
 
 

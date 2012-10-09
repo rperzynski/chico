@@ -21,6 +21,7 @@ pre {
 pre#show
 {
 font-size:14px;
+font-family: verdana, arial, helvetica, sans-serif;
 }
 
 div {
@@ -29,6 +30,9 @@ div {
 
   }
 }
+
+
+
 
 #notice {
   color: green;

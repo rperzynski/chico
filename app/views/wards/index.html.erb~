@@ -1,5 +1,5 @@
-<%= image_tag("/chicago.jpg", :alt => "image of chicago", :width => "100%", class="img-rounded") %>
-<br />
+<%= image_tag("/chicago.jpg", :alt => "image of chicago", :width => "100%", :class => "img-rounded") %>
+
 
 <div class="alert alert-info">
 <h2>Select Your Ward Number</h2>

@@ -1,11 +1,18 @@
-<h1>Select Your Ward Number</h1>
+<%= image_tag("/chicago.jpg", :alt => "image of chicago", :width => "100%", class="img-rounded") %>
+<br />
+
+<div class="alert alert-info">
+<h2>Select Your Ward Number</h2>
+</div>
 
 
+
+<div class="wardindex">
 
 <% @wards.each do |ward| %>
 
 
-<button><%= link_to ward.ward_num, ward %></button>
+<button type="button" class="btn btn-large" ><%= link_to ward.ward_num, ward %></button>
 
 
 
@@ -14,7 +21,7 @@
   
 <% end %>
 
-
+</div>
 
 
 

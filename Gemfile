@@ -22,7 +22,7 @@ end
 
 gem 'jquery-rails'
 
-gem "socrata", "~> 0.2.1"
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

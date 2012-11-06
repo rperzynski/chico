@@ -4,10 +4,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', ward_complaints_path(@ward) %>
-
-
-
 <ul class="nav nav-tabs nav-stacked">
 <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
 <li><%= link_to 'View All Wards', wards_path %></li>

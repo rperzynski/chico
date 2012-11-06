@@ -1,7 +1,12 @@
 Chico::Application.routes.draw do
 
+ get '/login' => "sessions#new", as: "new_session"
+  post '/login' => "sessions#create", as: "session"
+  delete '/logout' => "sessions#destroy", as: "logout"
+
   resources :wards do
 		resources :complaints
+
 	end
 
   # The priority is based upon order of creation:

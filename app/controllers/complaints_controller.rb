@@ -1,6 +1,15 @@
 class ComplaintsController < ApplicationController
  
 	before_filter :check_authentication, except: [:index,:show]
+def check_authentication
+unless session[:user_id]
+session[:intended_action] = action_name
+session[:intended_controller] = controller_name
+
+      redirect_to new_session_url
+    end
+  end
+
 
  # GET /complaints
   # GET /complaints.json

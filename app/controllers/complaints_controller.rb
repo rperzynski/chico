@@ -1,6 +1,6 @@
 class ComplaintsController < ApplicationController
  
-	before_filter :load_ward
+	before_filter :check_authentication, except: [:index,:show]
 
  # GET /complaints
   # GET /complaints.json

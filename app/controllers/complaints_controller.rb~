@@ -1,6 +1,6 @@
 class ComplaintsController < ApplicationController
  
-	before_filter :load_ward
+	before_filter :before_filter :check_authentication, except: [:index,:show]
 
  # GET /complaints
   # GET /complaints.json
@@ -47,7 +47,7 @@ class ComplaintsController < ApplicationController
 
     respond_to do |format|
       if @complaint.save
-        format.html { redirect_to [@ward, @complaint], notice: 'Complaint has been submitted.' }
+        format.html { redirect_to [@ward, @complaint], notice: 'Thank you, your complaint has been submitted.' }
         format.json { render json: @complaint, status: :created, location: @complaint }
       else
         format.html { render action: "new" }

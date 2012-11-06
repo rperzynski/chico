@@ -31,9 +31,6 @@ div {
   }
 }
 
-
-
-
 #notice {
   color: green;
 }
@@ -44,8 +41,14 @@ div {
   display: table;
 }
 
+.wardindex {
+padding-bottom: 200px;
+}
+ 
+.span3 {
+text-align: center; 
 
-  
+}
 
 #error_explanation {
   width: 450px;

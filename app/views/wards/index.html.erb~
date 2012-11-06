@@ -12,17 +12,19 @@
 <% @wards.each do |ward| %>
 
 
-<button type="button" class="btn btn-large" ><%= link_to ward.ward_num, ward %></button>
+<%= link_to ward.ward_num, ward, :class => "btn btn-large" %>
 
 
 
     
 
   
-<% end %>
+<% end %><br />
 
 </div>
-
-
+<a href="https://webapps.cityofchicago.org/StickerOnlineWeb/pageflows/wardLookUp/WardLookUpController.jpf">
+<pre id="show">
+<strong>Look Up Ward Number</strong>
+</pre></a>
 
   

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     # by default/convention, so we don't even
     # have to write that code in this controller action:
     if session[:user_id]
-      redirect_to pages_path
+      redirect_to wards_path
     end
   end
 
@@ -33,13 +33,13 @@ class SessionsController < ApplicationController
       if session[:request_url]
         redirect_to session[:request_url]
       else
-        redirect_to pages_url
+        redirect_to wards_url
       end
     # If there is no valid, authenticated user returned,
     # flash a notice and redirect to the new_session_url,
     # e.g., /login & the login form (/views/session/new.html.erb):
     else
-      flash[:notice] = "Username or password is incorrect"
+      flash[:notice] = "Username or password is incorrect. Please try again."
       redirect_to new_session_url
     end
   end
@@ -48,6 +48,6 @@ class SessionsController < ApplicationController
   def destroy
     reset_session # Use the reset_session method to
                   # wipe all session variables
-    redirect_to pages_url # Redirect to the Pages listing
+    redirect_to wards_url # Redirect to the Pages listing
   end
 end

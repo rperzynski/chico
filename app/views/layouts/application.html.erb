@@ -25,7 +25,12 @@
           <ul class="nav" >
             <li><%= link_to 'Home', wards_path %></li>
             <li><a href="http://www.cityofchicago.org">CityofChicago.org</a></li>
-            
+            <li><% if session[:user_id] %>
+                <%= link_to 'user', @user %> 
+                <% end %></li>
+            <li><% if session[:user_id] %>
+                <%= link_to 'Logout', logout_path, method: :delete %>
+                <% end %></li>
           </ul>
         </div>
       </div>

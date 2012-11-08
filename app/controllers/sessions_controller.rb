@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
     # the session variables:
     if user
       session[:user_id] = user.id # User ID for the session
+			session[:user_name] = user.username
       flash[:notice] = "Welcome back!" # Welcome notice
 
       # Now see if there's a request URL session variable

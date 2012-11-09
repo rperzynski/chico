@@ -35,6 +35,13 @@ div {
   color: green;
 }
 
+.aldermaninfo {
+border: 1px solid black;
+border-radius:3px;
+margin-bottom: 20px;
+}
+
+
 .field_with_errors {
   padding: 2px;
   background-color: red;
@@ -43,11 +50,23 @@ div {
 
 .wardindex {
 padding-bottom: 20px;
+width: 80%;
+margin-left: 10%;
 }
  
 .span3 {
 text-align: center; 
 
+}
+
+#about {
+text-align: center;
+margin-bottom: 100px;
+}
+
+
+.dl-horizontal {
+color: black;
 }
 
 #error_explanation {

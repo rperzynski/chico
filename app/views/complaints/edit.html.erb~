@@ -3,6 +3,5 @@
 <%= render 'form' %>
 
 <ul class="nav nav-tabs nav-stacked">
-<li><%= link_to 'Show', ward_complaint_path(@ward, @complaint) %></li>
 <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
 </ul>

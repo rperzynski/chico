@@ -1,10 +1,12 @@
 <div class="alert alert-success"><%= notice %></div>
 
 <div class="alert alert-info">
-<h2>Ward Number <%= @ward.ward_num %> </h2>
+<h2>Ward <%= @ward.ward_num %> </h2>
+</div>
+<div class="alert alert-success">
+	Alderman <%= @ward.alderman %> has successfully received the following complaints:
 </div>
 
-Socrata.ward.alderman
 
   <div class="hero-unit"><h5><%= @complaint.complaint_text %></h5></div>
 

@@ -1,7 +1,10 @@
 
 
 <div class="alert alert-info">
-<h2>Ward Number <%=  @ward.ward_num %> </h2>
+<h2>Ward <%=  @ward.ward_num %> </h2>
+</div>
+<div class="alert alert-success">
+	Alderman <%= @ward.alderman %> has successfully received the following complaints:
 </div>
 <% @complaints.each do |complaint| %>
 

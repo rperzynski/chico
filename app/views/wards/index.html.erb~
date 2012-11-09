@@ -8,23 +8,30 @@
 
 
 <div class="wardindex">
-
-<% @wards.each do |ward| %>
-
-
-<%= link_to ward.ward_num, ward, :class => "btn btn-large" %>
-
-
-
-    
-
-  
-<% end %><br />
-
+	<% @wards.each do |ward| %>
+		<%= link_to ward.ward_num, ward, :class => "btn btn-large" %>
+	<% end %>
 </div>
-<a href="https://webapps.cityofchicago.org/StickerOnlineWeb/pageflows/wardLookUp/WardLookUpController.jpf">
+
+
+
+
+
+<a href="https://webapps.cityofchicago.org/StickerOnlineWeb/pageflows/wardLookUp/WardLookUpController.jpf" target="_blank">
 <pre id="show">
 <strong>Look Up Ward Number</strong>
 </pre></a>
+<a href="https://data.cityofchicago.org/w/8yti-tif4" target="_blank">
+<pre id="show">
+<strong>View Wards on Map</strong>
+</pre></a>
 
+<div id="about">
+<img src="/stars.jpg"/>
+        <div class="well">
+				
+        The City of Chicago Complaint Department is here to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.
+
+        </div>
+</div>
   

@@ -22,7 +22,7 @@
 <pre id="show">
 <% if @ward.complaints.count > 0 %>
 View the <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), ward_complaints_path(@ward) %></strong> in Ward<%= @ward.ward_num%>
-<% else %>There are <strong>0 Complaints</strong> in Ward<%= @ward.ward_num%>
+<% else %>There are <strong>0 Complaints</strong> in Ward <%= @ward.ward_num%>
 <% end %>
 </pre>
 
@@ -36,7 +36,7 @@ View the <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), war
 </pre>
 
 <pre id="show">
-<strong><a href="http://www.cityofchicago.org/city/en/about/wards.html">View Information About Ward<%= @ward.ward_num%></a></strong>
+<strong><a href="http://www.cityofchicago.org/city/en/about/wards.html">View Information About Ward <%= @ward.ward_num%></a></strong>
 </pre>
 
 <pre id="show">

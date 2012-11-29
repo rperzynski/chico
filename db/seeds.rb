@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+Ward.delete_all
 
 ward = Ward.create( {ward_num: %{01}})
 complaints = ward.complaints.create([

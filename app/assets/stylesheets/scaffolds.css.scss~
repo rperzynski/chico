@@ -59,11 +59,14 @@ text-align: center;
 
 }
 
-.about {
+#about {
 text-align: center;
 margin-bottom: 100px;
 }
 
+.nav nav-tabs nav-stacked {
+font-size: 12px;
+}
 
 .dl-horizontal {
 color: black;

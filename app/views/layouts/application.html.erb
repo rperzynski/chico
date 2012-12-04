@@ -25,7 +25,7 @@
           <ul class="nav" >
             <li><%= link_to 'Home', wards_path %></li>
             <li><% if session[:user_id] %>
-                <%= link_to session[:user_name] %> 
+               <%= link_to session[:user_name] %> 
                 <% end %></li>
             <li><% if session[:user_id] %>
                 <%= link_to 'Logout', logout_path, method: :delete %>

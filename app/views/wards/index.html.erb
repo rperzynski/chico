@@ -1,11 +1,34 @@
-<%= image_tag("/chicago.jpg", :alt => "image of chicago", :width => "100%", :class => "img-rounded") %>
+<% if session[logout_path] %>
+                <%= link_to 'Logout', logout_path, method: :delete %>
+                <% end %>
+
+
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+			<%= image_tag("/chicago.jpg", :alt => "image of chicago", :width => "100%", :class => "img-rounded") %>
+ 		</div>
+                  
+    <div class="item">
+			<%= image_tag("/chicago2.jpg", :alt => "image of chicago", :width => "100%", :class => "img-rounded") %>
+    </div>
+		<div class="item">
+			<%= image_tag("/chicago3.jpg", :alt => "image of chicago", :width => "100%", :class => "img-rounded") %>
+    </div>
+	</div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+
+
 
 
 <div class="alert alert-info">
 <h2>Select Your Ward Number</h2>
 </div>
-
-
 
 <div class="wardindex">
 	<% @wards.each do |ward| %>
@@ -13,7 +36,7 @@
 	<% end %>
 </div>
 
-
+ 
 
 <a href="https://webapps.cityofchicago.org/StickerOnlineWeb/pageflows/wardLookUp/WardLookUpController.jpf" target="_blank">
 <pre id="show">

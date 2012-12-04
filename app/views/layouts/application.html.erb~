@@ -25,7 +25,7 @@
           <ul class="nav" >
             <li><%= link_to 'Home', wards_path %></li>
             <li><% if session[:user_id] %>
-                <%= link_to session[:user_name] %> 
+               <%= Welcome  link_to session[:user_name] %> 
                 <% end %></li>
             <li><% if session[:user_id] %>
                 <%= link_to 'Logout', logout_path, method: :delete %>
@@ -36,14 +36,14 @@
     </div>
   </div>
 
-<<<<<<< HEAD
+
 
 
 	 
 <div class="container">
-=======
+
   <div class="container">
->>>>>>> 50cccbf40a2eb61c15ed0569571ae3e3e275b45d
+
     <div class="row">
       <div class="span9"><%= yield %></div>
       <div class="span3">

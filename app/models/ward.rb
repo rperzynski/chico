@@ -13,7 +13,8 @@ class Ward < ActiveRecord::Base
 
 	def alderman_address
 		find_ward.address.titleize
-	end
+  end
+
 	def alderman_city
 		find_ward.city.titleize
 	end

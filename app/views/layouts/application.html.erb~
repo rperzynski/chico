@@ -24,9 +24,8 @@
         <div class="nav-collapse">
           <ul class="nav" >
             <li><%= link_to 'Home', wards_path %></li>
-						
             <li><% if session[:user_id] %>
-                <%= link_to "    Welcome #{session[:user_name]}" %> 
+                <%= link_to session[:user_name] %> 
                 <% end %></li>
             <li><% if session[:user_id] %>
                 <%= link_to 'Logout', logout_path, method: :delete %>
@@ -37,17 +36,22 @@
     </div>
   </div>
 
+<<<<<<< HEAD
 
 
 	 
+<div class="container">
+=======
   <div class="container">
+>>>>>>> 50cccbf40a2eb61c15ed0569571ae3e3e275b45d
     <div class="row">
-      <div class="span12"><%= yield %></div>
-
-    
-
-
-
+      <div class="span9"><%= yield %></div>
+      <div class="span3">
+        <img src="/stars.jpg"/>
+        <div class="well">
+        The City of Chicago Complaint Department is here to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.
+        </div>
+      </div>
     </div>
   </div>
 </body>

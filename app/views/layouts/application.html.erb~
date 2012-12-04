@@ -24,7 +24,7 @@
         <div class="nav-collapse">
           <ul class="nav" >
             <li><%= link_to 'Home', wards_path %></li>
-						<li><a href="#about">About</a></li>
+						
             <li><% if session[:user_id] %>
                 <%= link_to "    Welcome #{session[:user_name]}" %> 
                 <% end %></li>

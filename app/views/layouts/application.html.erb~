@@ -47,10 +47,10 @@
     <div class="row">
       <div class="span9"><%= yield %></div>
       <div class="span3">
-        
-        <div class="well">
+        <img src="/stars.jpg"/>
+        <div class="well"><img src="/stars.jpg"/>
         The City of Chicago Complaint Department is here to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.
-        </div><img src="/stars.jpg"/>
+        </div>
       </div>
     </div>
   </div>

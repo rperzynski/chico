@@ -1,8 +1,23 @@
 Chico::Application.routes.draw do
 
- get '/login' => "sessions#new", as: "new_session"
-  post '/login' => "sessions#create", as: "session"
-  delete '/logout' => "sessions#destroy", as: "logout"
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/failure"
+
+get   '/login', :to => 'sessions#new', :as => :login
+match '/auth/:provider/callback', :to => 'sessions#create'
+match '/auth/failure', :to => 'sessions#failure'
+get '/logout', :to => 'sessions#destroy'
+
+ # This is the old stuff before OMNIAUTH:
+ # get '/login' => "sessions#new", as: "new_session"
+ # post '/login' => "sessions#create", as: "session"
+ #  delete '/logout' => "sessions#destroy", as: "logout"
+
+
+
 
   resources :wards do
 		resources :complaints

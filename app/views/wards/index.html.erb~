@@ -32,7 +32,7 @@
 
 <div class="wardindex">
 	<% @wards.each do |ward| %>
-		<%= link_to ward.ward_num, ward, :class => "nav nav-pills" %>
+		<%= link_to ward.ward_num, ward, :class => "btn btn-large" %>
 	<% end %>
 </div>
 

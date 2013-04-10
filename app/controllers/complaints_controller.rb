@@ -1,6 +1,6 @@
 class ComplaintsController < ApplicationController
  
-	before_filter :check_authentication, except: [:index,:show]
+#	before_filter :check_Authorization, except: [:index,:show]
   before_filter :find_ward
 
 

@@ -2,9 +2,20 @@
 <h2>Ward Number <%= @ward.ward_num %> </h2>
 </div>
 
+<% if session[:uid] %>
+
 <%= render 'form' %>
+
+<% else %>
+
+Hello 
+
+<% end %>
+
 
 <ul class="nav nav-tabs nav-stacked">
 <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
 <li><%= link_to 'View All Wards', wards_path %></li>
 </ul>
+
+

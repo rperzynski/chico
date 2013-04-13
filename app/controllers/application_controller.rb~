@@ -1,20 +1,18 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  protected
 
-  # Set up a check_authentication method that can be
-  # used on any controller throughout the app to
-  # see whether someone has logged in:
-  def check_authentication
-    # Check that the :user_id session variable is set;
-    # if it is, the user gets to access whatever
-    # controller action is being checked.
-    # Otherwise...
-    unless session[:user_id]
-      # Grab the full path of the user's original request
-      # before check_authentication kicked in...
-      session[:request_url] = request.fullpath
-      # Redirect to the login form...
-      redirect_to new_session_url
-    end
+  def current_user
+    @current_user ||= User.find_by_id(session[:user_id])
+  end
+
+  def signed_in?
+    !!current_user
+  end
+
+  helper_method :current_user, :signed_in?
+
+  def current_user=(user)
+    @current_user = user
+    session[:user_id] = user.id
   end
 end

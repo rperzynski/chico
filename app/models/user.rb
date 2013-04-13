@@ -1,10 +1,13 @@
 class User < ActiveRecord::Base
   has_many :authorizations
-	validates :name, :presence => true
+# validates :name, :presence => true
+	attr_accessible :name, :uid, :provider
 
-def self.create_from_hash!(hash)
-  create(:name => hash['user']['name'])
-end
+
+ def self.create_from_hash!(hash)
+    create(:name => hash['info']['name'])
+  end
+
 
 
 

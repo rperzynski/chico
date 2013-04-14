@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
+	attr_accessible :name, :provider, :user_id, :uid, :user
   has_many :authorizations
-# validates :name, :presence => true
-	attr_accessible :name, :uid, :provider
+  validates :name, :presence => true
+	
 
 
  def self.create_from_hash!(hash)

@@ -3,14 +3,14 @@ class SessionsController < ApplicationController
 
 
  def create
-    
+
    auth_hash = request.env['omniauth.auth']
 
-    unless @auth = Authorization.find_from_hash(auth)
-      @auth = Authorization.create_from_hash(auth, current_user)
+    unless @auth = Authorization.find_from_hash(auth_hash)
+      @auth = Authorization.create_from_hash(auth_hash, current_user)
     end
 
-    self.current_user = @auth.user  
+    self.current_user = @auth.user
     render :text => "Welcome"
    end
 end

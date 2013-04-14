@@ -1,9 +1,10 @@
 class Authorization < ActiveRecord::Base
-	attr_accessible :provider, :user_id, :uid, :user
+	attr_accessible :user, :uid, :provider
+
   belongs_to :user
   validates_presence_of :user_id, :uid, :provider
   validates_uniqueness_of :uid, :scope => :provider
-	
+
 
   def self.find_from_hash(hash)
     find_by_provider_and_uid(hash['provider'], hash['uid'])

@@ -14,12 +14,15 @@ Chico::Application.routes.draw do
 match "/auth/:provider/callback" => "sessions#create"
 match "/signout" => "sessions#destroy", :as => :signout
 
+
  # This is the old stuff before OMNIAUTH:
  # get '/login' => "sessions#new", as: "new_session"
  # post '/login' => "sessions#create", as: "session"
  #  delete '/logout' => "sessions#destroy", as: "logout"
 
-
+# resources :wards, :shallow => true do
+#   resources :complaints
+# end
 
 
   resources :wards do

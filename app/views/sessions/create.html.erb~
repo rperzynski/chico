@@ -1,4 +1,4 @@
-<h1>Welcome <% if session[:current_user] %>
+<h1>Welcome <% if session[:user_id] %>
                <%= link_to session[:user_name] %> 
                 <% end %></h1>
 

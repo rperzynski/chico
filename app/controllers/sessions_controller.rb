@@ -2,30 +2,66 @@ class SessionsController < ApplicationController
 
 
 
- def create
+def create
 
    auth_hash = request.env['omniauth.auth']
-
     unless @auth = Authorization.find_from_hash(auth_hash)
       @auth = Authorization.create_from_hash(auth_hash, current_user)
     end
-
     self.current_user = @auth.user
-    render :text => "Welcome"
-   end
+
+redirect_to request.env['omniauth.origin'] || root_url
+
+    
 end
 
+    
+     #    if auth.user
+     # session[:user_id] = user.id # User ID for the session
+			#session[:user_name] = user.username
+    #  flash[:notice] = "Welcome back!" # Welcome notice
 
-#	def destroy
-# 	 session[:user_id] = nil
-#  	render :text => "You've logged out!"
-#	end
+      # Now see if there's a request URL session variable
+      # as set in check_authentication method of the
+      # application-wide controller
+      # (app/controllers/application_controller.rb).
+      # If there is, redirect to it. Otherwise, just show
+      # the Pages listing.
+  #    if session[:request_url]
+  #      redirect_to session[:request_url]
+ #     else
+ #      current_user_path
+  #    end
+    # If there is no valid, authenticated user returned,
+    # flash a notice and redirect to the new_session_url,
+    # e.g., /login & the login form (/views/session/new.html.erb):
+    #else
+    # # flash[:notice] = "Username or password is incorrect. Please try again."
+   #   redirect_to new_session_url
+   # end
+      
+    # If there is no valid, authenticated user returned,
+    # flash a notice and redirect to the new_session_url,
+    # e.g., /login & the login form (/views/session/new.html.erb):
+     
 
-#	def failure
-# 		 render :text => "Sorry, but you didn't allow access to our app!"
-#	end
 
-#end
+   
+
+
+
+
+
+	def destroy
+ 	 session[:user_id] = nil
+  	redirect_to request.env['omniauth.origin'] || root_url
+	end
+
+	def failure
+ 		 render :text => "Sorry, but you didn't allow access to our app!"
+	end
+
+end
 
 
 

@@ -1,18 +1,2 @@
-<div class="alert alert-info"><h2>Please Log In</h2></div>
-<div class="alert alert-info">In order to register a complaint, you must log in.</div>
-<% if flash[:notice] %>
-    <div id="notice"><%= flash[:notice] %></div>
-<% end %>
-<%= form_tag session_path do %>
-  <div class="field">
-    <%= label_tag :username %>
-    <%= text_field_tag :username %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="field">
-     <%= submit_tag "Login" %>
-  </div>
-<% end %>
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>

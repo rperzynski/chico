@@ -2,21 +2,14 @@
   <% if @complaint.errors.any? %>
     <div class="alert alert-error">
       <h5>Oops! You must enter a complaint before submitting below!</h5>
-
-
-      </ul>
     </div>
   <% end %>
+    <div class="field">
+      <%= f.text_area :complaint_text, :rows => "10", :placeholder => "Enter complaint here..."  %>
+    </div>
+    
+    <div class="alert alert-info">
+	    <%= f.submit  %>
+    </div>
 
-  <div class="field">
-   
-		<%= f.label :complaint_text %><br />
-		 
-    <%= f.text_area :complaint_text, :rows => "10" %>
-  </div>
-
-  <div class="form-actions">
-	
-    <%= f.submit %>
-  </div>
 <% end %>

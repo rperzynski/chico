@@ -54,7 +54,7 @@ end
 
 	def destroy
  	 session[:user_id] = nil
-  	redirect_to request.env['omniauth.origin'] || root_url
+  	redirect_to root_url
 	end
 
 	def failure

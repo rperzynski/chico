@@ -32,7 +32,7 @@
             <li><% if :current_user %>
                 <%= link_to 'Logout', "/logout" %>
 								<% else %>
-								<%= render 'null' %>
+								<%= render 'Test' %>
                 <% end %></li>
           </ul>
         </div>

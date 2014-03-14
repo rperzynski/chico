@@ -2,7 +2,9 @@
 <h2>Ward Number <%= @ward.ward_num %> </h2>
 </div>
 
-<% if :current_user %>
+<%= link_to "Connect With Twitter", "/auth/twitter" %>
+
+<% if  :current_user %>
 
 <%= render 'form' %>
 

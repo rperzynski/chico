@@ -30,10 +30,15 @@
 							 <%= link_to "Connect With Twitter", "/auth/twitter" %>
                 <% end %></li>
             <li><% if :current_user %>
-                <%= link_to 'Logout', "/logout" %>
+                <%= link_to 'Logout', "/logout" %> 
 								<% else %>
 								<%= render 'Test' %>
                 <% end %></li>
+<li><% if :current user %>
+Signed in as <%= :user_name %>. Not you?
+
+<% end %></li>
+
           </ul>
         </div>
       </div>
@@ -50,7 +55,7 @@
 
     <div class="row">
       <div class="span9"><%= yield %></div>
-      <div class="span3">
+      <div class="span2">
         
         <div class="well"><img src="/stars.jpg"/>
 				<strong>About The Chicago Complaint Department</strong><br />This site has been set up to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.

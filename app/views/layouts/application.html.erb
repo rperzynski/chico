@@ -30,10 +30,15 @@
 							 <%= link_to "Connect With Twitter", "/auth/twitter" %>
                 <% end %></li>
             <li><% if :current_user %>
-                <%= link_to 'Logout', "/logout" %>
+                <%= link_to 'Logout', "/logout" %> 
 								<% else %>
 								<%= render 'Test' %>
                 <% end %></li>
+<li><% if :current_user %>
+Signed in as <%= :user_name %>. Not you?
+
+<% end %></li>
+
           </ul>
         </div>
       </div>

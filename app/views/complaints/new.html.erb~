@@ -2,7 +2,7 @@
 <h2>Ward Number <%= @ward.ward_num %> </h2>
 </div>
 
-
+<%= link_to "Connect With Twitter", "/auth/twitter" %>
 
 <% if  :current_user %>
 
@@ -14,6 +14,11 @@
 
 <% end %>
 
+<% if :current_user %>  
+    Welcome, <%= :user_id %>!  
+  <% else %>  
+    <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
+  <% end %>  
 
 <ul class="nav nav-tabs nav-stacked">
 <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>

@@ -1,5 +1,5 @@
 class Authorization < ActiveRecord::Base
-	attr_accessible :user, :uid, :provider
+	attr_accessible :user, :uid, :provider, :user_id
 
   belongs_to :user
   validates_presence_of :user_id, :uid, :provider

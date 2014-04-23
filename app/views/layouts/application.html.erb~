@@ -34,10 +34,10 @@
 								<% else %>
 								<%= render 'Test' %>
                 <% end %></li>
-<li><% if :current user %>
+<li><% if :current_user %>
 Signed in as <%= :user_name %>. Not you?
 
-<% end %></li>
+<% end %></li> 
 
           </ul>
         </div>

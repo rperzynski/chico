@@ -1,4 +1,6 @@
-<h1>Edit Your Complaint</h1>
+<div class="alert alert-info">
+<h2>Edit Your Complaint</h2>
+</div>
 
 <%= render 'form' %>
 

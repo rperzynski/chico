@@ -14,15 +14,25 @@
 
 <% end %>
 
-<% if :current_user %>  
-    Welcome, <%= :user_id %>!  
-  <% else %>  
-    <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
-  <% end %>  
+
 
 <ul class="nav nav-tabs nav-stacked">
 <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
 <li><%= link_to 'View All Wards', wards_path %></li>
+
 </ul>
+<li><% if :current_user %>
+               <%= link_to session[:user_name] %>
+								<% else %>
+							 <%= link_to "Connect With Twitter", "/auth/twitter" %>
+                <% end %></li>
+<% if session[:user_id] %>
+<%= render 'form' %>
+
+<% else %>
+
+<%= link_to "Connect With Twitter", "/auth/twitter" %>
+
+<% end %>
 
 

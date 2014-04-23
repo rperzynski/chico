@@ -8,9 +8,16 @@ class ApplicationController < ActionController::Base
  # end
 
 def current_user=(user)
-  @current_user ||= User.find(session[:user_id]) if session[:user_id]  
+  @current_user = user
   session[:user_id] = user.id
 end
+
+#Blocked out 
+
+#def current_user=(user)
+#  @current_user ||= User.find(session[:user_id]) if session[:user_id]  
+#  session[:user_id] = user.id
+#end
 
 
 

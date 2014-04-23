@@ -9,7 +9,8 @@ def create
       @auth = Authorization.create_from_hash(auth_hash, current_user)
    end
   self.current_user = @auth.user
-redirect_to request.env['omniauth.origin'] || root_url
+
+	redirect_to request.env['omniauth.origin'] || root_url
  
 end
 
@@ -31,6 +32,8 @@ end
 	def failure
  		 render :text => "Sorry, but you didn't allow access to our app!"
 	end
+
+
 
 end
     

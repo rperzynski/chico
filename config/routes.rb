@@ -1,10 +1,9 @@
 Chico::Application.routes.draw do
 
   get "sessions/new"
-
   get "sessions/create"
-
   get "sessions/failure"
+	get "sessions/destroy"
 
 # get   '/login', :to => 'sessions#new', :as => :login
 # match '/auth/:provider/callback', :to => 'sessions#create'
@@ -25,10 +24,9 @@ match "/logout" => "sessions#destroy", :as => :signout
 # end
 
 
-  resources :wards do
-		resources :complaints
-
-	end
+resources :wards, :shallow => true do
+  resources :complaints
+end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

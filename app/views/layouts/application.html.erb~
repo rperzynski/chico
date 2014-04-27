@@ -24,20 +24,11 @@
         <div class="nav-collapse">
           <ul class="nav" >
             <li><%= link_to 'Home', wards_path %></li>
-						<li><% if :current_user %>
-               <%= link_to session[:user_id] %>
-								<% else %>
-							 <%= link_to "Connect With Twitter", "/auth/twitter" %>
-                <% end %></li>
-            <li><% if :current_user %>
-                <%= link_to 'Logout', "/logout" %> 
-								<% else %>
-								<%= render 'Test' %>
-                <% end %></li>
-<li><% if :current_user %>
+						<
+<!--<li><% if :current_user %>
 Signed in as <%= :user_name %>. Not you?
 
-<% end %></li> 
+<% end %></li> -->
 
           </ul>
         </div>

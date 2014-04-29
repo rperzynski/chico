@@ -64,8 +64,8 @@ ward = Ward.create( {ward_num: %{49}})
 ward = Ward.create( {ward_num: %{50}})
 
 
-user = User.create({:username => 'Chad'})
-user.password = 'secret'
-user.save
+#user = User.create({:name => 'Chad'})
+#user.password = 'secret'
+#user.save
 
 

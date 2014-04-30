@@ -1,38 +1,19 @@
 <div class="alert alert-info">
-<h2>Ward Number <%= @ward.ward_num %> </h2>
+  <h2>Ward Number <%= @ward.ward_num %> </h2>
 </div>
 
-<%= link_to "Connect With Twitter", "/auth/twitter" %>
-
-<% if  :current_user %>
-
-<%= render 'form' %>
-
+<% if user_signed_in? %>
+  <%= render 'form' %>
 <% else %>
-
-<%= link_to "Connect With Twitter", "/auth/twitter" %>
-
+  <%= link_to "Connect With Twitter", "/auth/twitter" %>
 <% end %>
-
-
 
 <ul class="nav nav-tabs nav-stacked">
-<li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
-<li><%= link_to 'View All Wards', wards_path %></li>
-
+  <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
+  <li><%= link_to 'View All Wards', wards_path %></li>
+  <% if user_signed_in? %>
+    <li><%= link_to "Log out", logout_path, method: :delete %></li>
+  <% end %>
 </ul>
-<li><% if :current_user %>
-               <%= link_to session[:user_id] %>
-								<% else %>
-							 <%= link_to "Connect With Twitter", "/auth/twitter" %>
-                <% end %></li>
-<% if session[:user_id] %>
-<%= render 'form' %>
-
-<% else %>
-
-<%= link_to "Connect With Twitter", "/auth/twitter" %>
-
-<% end %>
 
 

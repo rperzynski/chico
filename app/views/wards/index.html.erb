@@ -28,13 +28,17 @@
 <h2>Select Your Ward Number</h2>
 </div>
 
+
+
+
+
 <div class="wardindex">
 	<% @wards.each do |ward| %>
-		<%= link_to ward.ward_num, ward, :class => "btn btn-large" %>
+		<%= link_to ward.ward_num, ward, :class => "btn btn-default" %>
 	<% end %>
 </div>
 
- 
+
 
 <a href="https://webapps.cityofchicago.org/StickerOnlineWeb/pageflows/wardLookUp/WardLookUpController.jpf" target="_blank">
 <pre id="show">

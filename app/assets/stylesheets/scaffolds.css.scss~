@@ -50,7 +50,7 @@ margin-bottom: 20px;
 
 .wardindex {
 padding-bottom: 20px;
-width: 80%;
+width: 90%;
 margin-left: 10%;
 }
  
@@ -65,7 +65,7 @@ margin-bottom: 100px;
 }
 
 .nav nav-tabs nav-stacked {
-font-size: 12px;
+font-size: 60px;
 }
 
 .dl-horizontal {

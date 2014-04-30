@@ -12,47 +12,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href='<%= wards_path %>'>Chicago Complaint Department</a>
-        <div class="nav-collapse">
-          <ul class="nav" >
-            <li><%= link_to 'Home', wards_path %></li>
-						
-<!--<li><% if :current_user %>
-Signed in as <%= :user_name %>. Not you?
-
-<% end %></li> -->
-
-          </ul>
-        </div>
-      </div>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Chicago Complaint Department</a>
     </div>
-  </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to 'Home', wards_path %></li>
+       
+       
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
-
-
-	 
-<div class="container">
-
-  <div class="container">
-
-    <div class="row">
-      <div class="span9"><%= yield %></div>
-      <div class="span2">
-        
-        <div class="well"><img src="/stars.jpg"/>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8"><%=yield %></div>
+  <div class="col-xs-6 col-md-4"><div class="well"><img src="/stars.jpg"/>
 				<strong>About The Chicago Complaint Department</strong><br />This site has been set up to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.
-        </div>
-      </div>
-    </div>
-  </div>
+        </div></div>
+</div>
+	 
+
 </body>
 </html>

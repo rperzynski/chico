@@ -3,19 +3,13 @@
 </div>
 
 <% if user_signed_in? %>
-<h1>Welcome</h1>
+<h4>Welcome to the Complaint Department</h4>
   <%= render 'form' %>
 <% else %>
   <%= link_to "In order to make a complaint, you must connect With Twitter", "/auth/twitter" %>
 <% end %>
 
-<ul class="nav nav-pills nav-stacked">
-  <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
-  <li><%= link_to 'View All Wards', wards_path %></li>
-  <% if user_signed_in? %>
-    <li><%= link_to "Log out", logout_path, method: :delete %></li>
-  <% end %>
-</ul>
+
 
 
 <ol class="breadcrumb">

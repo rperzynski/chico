@@ -38,9 +38,13 @@
 
 
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-8"><%= yield %></div>
+  <div class="col-xs-12 col-sm-6 col-md-8"><%=yield %></div>
   <div class="col-xs-6 col-md-4"><div class="well"><img src="/stars.jpg"/>
 				<strong>About The Chicago Complaint Department</strong><br />This site has been set up to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
         </div></div>
 </div>
 	 

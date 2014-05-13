@@ -21,18 +21,15 @@
 
 <pre id="show">
 <% if @ward.complaints.count > 0 %>
-View the <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), ward_complaints_path(@ward) %></strong> in Ward <%= @ward.ward_num%>
+View the <strong><%= link_to pluralize(@ward.complaints.count, 'complaint'), ward_complaint_path(@ward) %></strong> in Ward <%= @ward.ward_num%>
 <% else %>There are <strong>0 Complaints</strong> in Ward <%= @ward.ward_num%>
 <% end %>
 </pre>
 
 
-<ul class="nav nav-tabs nav-stacked">
-<li><%= link_to 'File a Complaint', new_ward_complaint_path(@ward) %></li>
-<li><%= link_to 'View All Wards', wards_path %></li>
+<ul class="nav nav-pills nav-stacked">
+<li><%= link_to 'File a New Complaint', new_ward_complaint_path(@ward) %></li>
 <li><%= link_to "View More Information About Ward #{@ward.ward_num} On CityofChicago.org","http://www.cityofchicago.org/city/en/about/wards/#{@ward.ward_num}.html" %></li>
+<li><%= link_to 'Back to View All Wards', wards_path %></li>
 </ul>
-
-
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.com/maps?q=#{@ward.alderman_address}, Chicago IL" %></iframe>
 

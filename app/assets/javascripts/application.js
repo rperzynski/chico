@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 
 //= require_tree .
+
+// Loads all Bootstrap javascripts
+
+$(function () {
+    $('#example').popover();
+});
+

@@ -28,7 +28,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to 'Home', wards_path %></li>
+        <li><%= link_to 'Home', wards_path %></li>
+				<li><% if user_signed_in? %>
+<%= link_to "Log out", logout_path, method: :delete %>
+<% else %>
+
+<% end %></li>
        
        
       </ul>

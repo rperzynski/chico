@@ -3,7 +3,7 @@
 </div>
 
 <% if user_signed_in? %>
-<h1>Welcome</h1>
+<h4>Welcome to the Complaint Department</h4>
   <%= render 'form' %>
 <% else %>
   <%= link_to "In order to make a complaint, you must connect With Twitter", "/auth/twitter" %>

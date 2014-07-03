@@ -6,7 +6,7 @@
 <h4>Welcome to the Complaint Department</h4>
   <%= render 'form' %>
 <% else %>
-  <%= link_to "In order to make a complaint, you must connect With Twitter", "/auth/twitter" %>
+  In order to file a complaint, you must sign in using a Twitter account. <%= link_to "Connect With Twitter", "/auth/twitter" %>
 <% end %>
 
 

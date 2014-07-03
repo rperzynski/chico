@@ -27,4 +27,9 @@
 
 h2.info {
  display: inline;
+	text-align: top;
 }
+
+.text-center h2 { margin: 0; }
+
+

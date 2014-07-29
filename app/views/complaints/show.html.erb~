@@ -6,13 +6,12 @@
 
 
 
-  <div class="hero-unit"><h5><%= @complaint.complaint_text %></h5></div>
+  <div class="hero-unit"><h5><%= @complaint.complaint_text %><li><%= link_to 'Edit Complaint', edit_ward_complaint_path(@ward, @complaint) %></li></h5></div>
 
 
 <ul class="nav nav-tabs nav-stacked">
-<li><%= link_to 'Edit Complaint', edit_ward_complaint_path(@ward, @complaint) %></li>
+
 <li><%= link_to 'View All Complaints In This Ward', ward_complaints_path(@ward) %></li>
-<li><%= link_to 'View All Complaints In This Ward', ward.ward_num %></li>
 <li><%= link_to 'Select Different Ward', wards_path %></li>
 
 </ul>

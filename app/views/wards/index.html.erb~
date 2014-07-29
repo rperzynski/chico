@@ -26,11 +26,10 @@
 
 <div class="alert alert-info">
 <h2 class='info'>Select Your Ward Number</h2>
-<button type="button" id="example" class="btn btn-info btn-xs"rel="popover" html="true"
+<button type="button" id="example" class="btn btn-info btn-xs"rel="popover" html="true" margin-top: "100%" margin-bottom: "100%"
    data-content="The City of Chicago is divided into fifty legislative districts or wards. Each district is represented by an alderman who is elected by their constituency to serve a four year term."
    data-original-title="What is this?">?
 </button>
-<a href="#" role="button" class="btn popovers" data-toggle="popover" title="" data-content="test content <a href='' title='test add link'>link on content</a>" data-original-title="test title">test link</a>
 </div>
 
 
@@ -43,16 +42,10 @@
 	<% end %>
 </div>
 
-
-
-<a href="https://webapps.cityofchicago.org/StickerOnlineWeb/pageflows/wardLookUp/WardLookUpController.jpf" target="_blank">
-<pre id="show">
-<strong>Look Up Ward Number</strong>
-</pre></a>
-<a href="https://data.cityofchicago.org/w/8yti-tif4" target="_blank">
-<pre id="show">
-<strong>View Wards on Map</strong>
-</pre></a>
+<ul class="nav nav-pills nav-stacked">
+<li><a href="https://webapps.cityofchicago.org/StickerOnlineWeb/pageflows/wardLookUp/WardLookUpController.jpf" target="_blank">Look Up Ward Number</a></li>
+  <li><a href="https://data.cityofchicago.org/w/8yti-tif4" target="_blank">View Wards on Map</a></li>
+</ul>
 
 
 

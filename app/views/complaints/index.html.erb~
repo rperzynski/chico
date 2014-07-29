@@ -3,24 +3,41 @@
 <div class="alert alert-info">
 <h2>Ward <%=  @ward.ward_num %> </h2>
 </div>
+<% if @ward.complaints.count > 0 %>
 <div class="alert alert-success">
 	Alderman <%= @ward.alderman %> has successfully received the following complaints:
 </div>
+<% else %>
+<div class="alert alert-warning">
+There are currently <strong>0 Complaints</strong> in Ward <%= @ward.ward_num%>
+</div>
+<% end %>
+
+
+
+
+
+
 
 <% @complaints.each do |complaint| %>
 
-<blockquote>
+<div class="well">
 
-   <%= complaint.complaint_text %>
+ <h3> <%= complaint.complaint_text %> </h3>
 
-</blockquote>
+Last Updated:<%= complaint.updated_at.to_formatted_s(:long_ordinal) %>
+
+</div>
 
 <% end %>
   
 <ul class="nav nav-tabs nav-stacked">
+<li><%= link_to 'Edit Complaint', edit_complaint_path(@ward, @complaint) %></li>
 <li><%= link_to 'File A New Complaint In This Ward', new_ward_complaint_path(@ward) %></li>
 <li><%= link_to 'View All Wards', wards_path %></li>
 </ul>
+
+
 
 
 

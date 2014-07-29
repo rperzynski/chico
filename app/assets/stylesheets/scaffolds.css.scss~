@@ -24,6 +24,16 @@ font-size:14px;
 font-family: verdana, arial, helvetica, sans-serif;
 }
 
+.authlinks
+{
+list-style-type: none;
+
+}
+
+.authlinks li
+{margin-bottom: 10px;
+}
+
 div {
   &.field, &.actions {
     margin-bottom: 10px;
@@ -41,6 +51,24 @@ border-radius:3px;
 margin-bottom: 20px;
 }
 
+ 
+.welldescription {
+
+text-align: center;
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.welldescription img {
+margin-left: auto;
+    margin-right: auto;
+}
 
 .field_with_errors {
   padding: 2px;
@@ -50,8 +78,8 @@ margin-bottom: 20px;
 
 .wardindex {
 padding-bottom: 20px;
-width: 90%;
-margin-left: 10%;
+width: 100%;
+margin-left: 0%;
 }
  
 .span3 {
@@ -91,6 +119,6 @@ color: black;
   }
   ul li {
     font-size: 12px;
-    list-style: square;
+    list-style-type: none;
   }
 }

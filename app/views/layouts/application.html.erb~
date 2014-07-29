@@ -32,7 +32,7 @@
 				<li><% if user_signed_in? %>
 <%= link_to "Log out", logout_path, method: :delete %>
 <% else %>
-<%= link_to "In order to make a complaint, you must connect With Twitter", "/auth/twitter" %>
+
 <% end %></li>
        
        
@@ -41,15 +41,15 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-
+<div class="container-fluid">
 <div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-8"><%=yield %></div>
-  <div class="col-xs-6 col-md-4"><div class="well"><img src="/stars.jpg"/>
+  <div class="col-xs-12 col-md-8"><%=yield %></div>
+  <div class="col-xs-12 col-md-4"><div class="welldescription"><img src="/stars.jpg" class="img-responsive"/>
 				<strong>About The Chicago Complaint Department</strong><br />This site has been set up to fix problems with the city - one citizen at a time. No matter what kind of complaint you have, you can send it via this secure page and it will be received by the right person.
 
         </div></div>
 </div>
-	 
+	 </div>
 
 </body>
 </html>

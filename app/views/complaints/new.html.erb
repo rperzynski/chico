@@ -6,17 +6,27 @@
 <h4>Welcome to the Complaint Department</h4>
   <%= render 'form' %>
 <% else %>
-  In order to file a complaint, you must sign in using a Twitter account. <%= link_to "Connect With Twitter", "/auth/twitter" %>
+
+
+<div class="alert alert-warning" role="alert"><h3>Please Log In</h3></div>
+<div class="well well-lg">
+For security purposes, you must log in to file a complaint. Please select one of the available choices below to securely log in and get started.  
+</div>
+<ul class="authlinks">
+<li><a href="/auth/twitter"><button type="button" class="btn btn-primary">Log In Using Twitter</button></a> </li>
+<li><button type="button" class="btn btn-primary" disabled="disabled">Log In Using Facebook</button></li> 
+<li><button type="button" class="btn btn-primary" disabled="disabled">Log In Using Google</button></li></ul> 
+
+
 <% end %>
 
 
 
-
-<ol class="breadcrumb">
-   <li><%= link_to 'Back', ward_complaints_path(@ward) %></li>
+<ul class="nav nav-pills nav-stacked">
+<li><%= link_to 'Back', ward_path(@ward) %></li>
   <li><%= link_to 'View All Wards', wards_path %></li>
   <% if user_signed_in? %>
     <li><%= link_to "Log out", logout_path, method: :delete %></li>
   <% end %>
-</ol>
+</ul>
 

@@ -55,6 +55,9 @@ module Chico
 
     # Enable the asset pipeline
     config.assets.enabled = true
+# Rails 3.1 introduced the Asset Pipeline to concatenate and minify or compress JavaScript and CSS # assets. Heroku has a step in the build process to precompile your assets into your slug, so they’re # readily available. To speed up asset precompiles, it’s recommended that you tell Rails to only # partially load your app. Heroku also, does not provide the whole app environment to the build # process, so this is required. In your config/application.rb set the following:
+
+		config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

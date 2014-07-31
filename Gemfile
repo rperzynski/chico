@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+
 gem 'rails', '3.2.15'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
-  gem 'sqlite3'
-end
+#group :development do
+#  gem 'sqlite3'
+#end
 
 group :production do
   gem 'pg'
-  gem 'rails_12factor'
+  
 end
 
 
@@ -37,7 +37,8 @@ gem 'windy'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-
+gem 'rails_12factor'
+gem 'pg'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 

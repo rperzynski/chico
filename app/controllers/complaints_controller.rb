@@ -49,7 +49,7 @@ class ComplaintsController < ApplicationController
 
     respond_to do |format|
       if @complaint.save
-        format.html { redirect_to [@ward, @complaint], notice: 'Thank you, your complaint has been submitted.' }
+        format.html { redirect_to [@ward, @complaints], notice: 'Thank you, your complaint has been submitted.' }
         format.json { render json: @complaint, status: :created, location: @complaint }
       else
         format.html { render action: "new" }
